@@ -5,12 +5,37 @@
   "main": "index.js",
   "scripts": {
     "build": "sass --load-path=. scss/bootstrap-italia-custom.scss:css/compiled/bootstrap-italia-custom.min.css --style=compressed",
+	"buildgreen": "sass --load-path=. bootstrap-italia-green/scss/bootstrap-italia-green.scss:bootstrap-italia-green/dist/bootstrap-italia-green.min.css --style=compressed",
+    "buildgreendark": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-dark.scss:bootstrap-italia-green/dist/bootstrap-italia-green-dark.min.css --style=compressed",
+    "buildgreenemerald": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-emerald.scss:bootstrap-italia-green/dist/bootstrap-italia-green-emerald.min.css --style=compressed",
+    "buildgreenteal": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-teal.scss:bootstrap-italia-green/dist/bootstrap-italia-green-teal.min.css --style=compressed",
+    "buildgreenlombardia": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-lombardia.scss:bootstrap-italia-green/dist/bootstrap-italia-green-lombardia.min.css --style=compressed",
+    "buildgreenturquoise": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-turquoise.scss:bootstrap-italia-green/dist/bootstrap-italia-green-turquoise.min.css --style=compressed",
+    "buildblueonu": "sass --load-path=.  bootstrap-italia-blue/scss/bootstrap-italia-blue-ONU.scss:bootstrap-italia-blue/dist/bootstrap-italia-blue-ONU.min.css --style=compressed",
+    "buildbluegrey": "sass --load-path=. bootstrap-italia-blue/scss/bootstrap-italia-blue-grey.scss:bootstrap-italia-blue/dist/bootstrap-italia-blue-grey.min.css --style=compressed",
+    "buildbrownweb": "sass --load-path=.  bootstrap-italia-brown/scss/bootstrap-italia.scss:bootstrap-italia-brown/dist/bootstrap-italia-brown-web.min.css --style=compressed",
+    "buildgoldantique": "sass --load-path=.  bootstrap-italia-yellow/scss/bootstrap-italia.scss:bootstrap-italia-yellow/dist/bootstrap-italia-gold-antique.min.css --style=compressed",
+    "buildpurpletwilight": "sass --load-path=.  bootstrap-italia-purple/scss/bootstrap-italia.scss:bootstrap-italia-purple/dist/bootstrap-italia-purple-twilight.min.css --style=compressed",
+    "buildred": "sass --load-path=.  bootstrap-italia-red/scss/bootstrap-italia-red.scss:bootstrap-italia-red/dist/bootstrap-italia-red.min.css --style=compressed",
+    "buildredbittersweet": "sass --load-path=.  bootstrap-italia-red/scss/bootstrap-italia-red-bittersweet.scss:bootstrap-italia-red/dist/bootstrap-italia-red-bittersweet.min.css --style=compressed",
+    "buildreddark": "sass --load-path=.  bootstrap-italia-red/scss/bootstrap-italia-red-dark.scss:bootstrap-italia-red/dist/bootstrap-italia-red-dark.min.css --style=compressed",
+    "buildredimperial": "sass --load-path=.  bootstrap-italia-red/scss/bootstrap-italia-red-imperial.scss:bootstrap-italia-red/dist/bootstrap-italia-red-imperial.min.css --style=compressed",
+    "buildredpompeiano": "sass --load-path=.  bootstrap-italia-red/scss/bootstrap-italia-red-pompeiano.scss:bootstrap-italia-red/dist/bootstrap-italia-red-pompeiano.min.css --style=compressed",
+    "buildgreyblu": "sass --load-path=.  bootstrap-italia-grey/scss/bootstrap-italia-grey-blu.scss:bootstrap-italia-grey/dist/bootstrap-italia-grey-blu.min.css --style=compressed",
+    "buildgreydove": "sass --load-path=.  bootstrap-italia-grey/scss/bootstrap-italia-grey-dove.scss:bootstrap-italia-grey/dist/bootstrap-italia-grey-dove.min.css --style=compressed",
+    "buildselected": "npm run buildgreen && npm run buildgreendark && npm run buildgreenlombardia && npm run buildgreenturquoise && npm run buildblueonu && npm run buildbluegrey && npm run buildgoldantique && npm run buildgreenteal && npm run buildpurpletwilight && npm run buildredbittersweet && npm run buildreddark && npm run buildredpompeiano && npm run buildgreyblu && npm run buildgreydove && copyfiles -u 1 ./bootstrap-italia*/dist/* css",
+    "buildall": "npm run buildred && npm run buildgreen && npm run buildgreendark && npm run buildgreenlombardia && npm run buildgreenturquoise && npm run buildblueonu && npm run buildbluegrey && npm run buildbrownweb && npm run buildgoldantique && npm run buildgreenemerald && npm run buildgreenteal && npm run buildpurpletwilight && npm run buildredbittersweet && npm run buildreddark && npm run buildredimperial && npm run buildredpompeiano && npm run buildgreyblu && npm run buildgreydove && copyfiles -u 1 ./bootstrap-italia*/dist/* css",
+    "buildAndCopyInTheme": "npm run buildgreen && npm run buildgreendark && npm run buildgreenlombardia && npm run buildgreenturquoise && npm run buildblueonu && npm run buildbluegrey && npm run buildgoldantique && npm run buildgreenteal && npm run buildpurpletwilight && npm run buildredbittersweet && npm run buildreddark && npm run buildredpompeiano && npm run buildgreyblu && npm run buildgreydove && copyfiles -u 1 ./bootstrap-italia*/dist/* css && copyfiles -u 2 ./css/dist/* ../../../../../lavoro/.net_core/OrchardCore-Fork-OrchardCorePA/OrchardCore/src/orchardcorepa/Themes/ComuniBootstrapItalia/wwwroot/css",
+    "copyall": "copyfiles -u 1 ./bootstrap-italia*/dist/* css",
+    "clean": "del-cli ./bootstrap-italia*/dist && del-cli ./css",
     "start": "http-server ."
   },
   "author": "Presidenza del Consiglio dei Ministri",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bootstrap-italia": "2.0.4"
+    "bootstrap-italia": "2.0.5",
+	"copyfiles": "^2.4.0",
+	"del-cli": "^5.0.0"
   },
   "devDependencies": {
     "http-server": "^14.1.0",

@@ -1,0 +1,29 @@
+// modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
+
+// Per l'override del colore $primary della palette in formato HSB:
+
+// Per ottenere il colore #35526e test 1 --> R:21, G:32, B:43 (https://rgb.to/21,32,43) h 210 s 51 b 17
+// Per ottenere il colore #35526e test 2 --> R:53, G:82, B:110 (https://rgb.to/53,82,110 h 209 s 52 b 43)
+// Per ottenere il colore #35526e test 3 --> R:28, G:44, B:58 (https://rgb.to/28,44,58 h 209 s 52 b 43)
+// Per ottenere il colore #35526e test 4 --> R:193, G:209, B:225 (https://rgb.to/193,209,225 h 210 s 14 b 88)
+// Per ottenere il colore #072C45 test 5 --> R:7, G:44, B:69 (https://rgb.to/7,44,69 h 204 s 90 b 27)
+$primary-h: 204;
+$primary-s: 90;
+$primary-b: 27;
+
+//banner regione
+$primary-a7: #072C45;
+//zona menu
+$primary-a6: #35526E;
+//footer
+$primary-a10: #072C45;
+
+// Nota: per convertire il codice esadecimale di un colore formato HSB
+// è possibile utilizzare ad esempio il sito https://rgb.to/.
+
+// import libreria - da cartella dove si trova bootstrap italia con l'aggiunta delle modifiche OrchardCore
+//@import "../../node_modules/bootstrap-italia/src/scss/bootstrap-italia";
+@import "../bootstrap-italia/src/scss/bootstrap-italia.scss";
+
+// splide carousel - see issue https://github.com/italia/bootstrap-italia-playground/issues/23
+@import 'node_modules/@splidejs/splide/src/css/core/index';

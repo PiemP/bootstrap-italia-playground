@@ -2,7 +2,11 @@
 node_modules/
 
 # Compiled CSS
-css/compiled/
+css/
 
 # BSI Next
 bootstrap-italia-next
+
+# custom
+package-lock.json
+dist

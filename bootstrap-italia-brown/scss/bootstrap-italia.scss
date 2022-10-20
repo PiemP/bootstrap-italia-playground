@@ -1,0 +1,18 @@
+// file: bootstrap-italia-red.scss
+
+// modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
+
+// Per l'override del colore $primary della palette in formato HSB:
+
+// Per ottenere il colore R:131, G:16, B:12 (https://rgb.to/131,16,12)
+$primary-h: 2;
+$primary-s: 91;
+$primary-b: 51;
+// Nota: per convertire il codice esadecimale di un colore formato HSB
+// è possibile utilizzare ad esempio il sito https://rgb.to/.
+
+// import libreria - da cartella dove si trova bootstrap italia con l'aggiunta delle modifiche OrchardCore
+@import "../../../bootstrap-italia/src/scss/bootstrap-italia.scss";
+
+// splide carousel - see issue https://github.com/italia/bootstrap-italia-playground/issues/23
+@import 'node_modules/@splidejs/splide/src/css/core/index';
