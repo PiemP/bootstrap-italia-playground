@@ -4,8 +4,9 @@
   "description": "The easiest way to start playing with Bootstrap Italia.",
   "main": "index.js",
   "scripts": {
-    "build": "sass --load-path=. scss/bootstrap-italia-custom.scss:css/compiled/bootstrap-italia-custom.min.css --style=compressed",
-	"buildgreen": "sass --load-path=. bootstrap-italia-green/scss/bootstrap-italia-green.scss:bootstrap-italia-green/dist/bootstrap-italia-green.min.css --style=compressed",
+    "vercel": "rm -rf ./bootstrap-italia && cp -r node_modules/bootstrap-italia/ ./bootstrap-italia",
+    "build": "npm run vercel && sass --load-path=node_modules scss/bootstrap-italia-custom.scss:css/compiled/bootstrap-italia-custom.min.css --style=compressed",
+	  "buildgreen": "sass --load-path=. bootstrap-italia-green/scss/bootstrap-italia-green.scss:bootstrap-italia-green/dist/bootstrap-italia-green.min.css --style=compressed",
     "buildgreendark": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-dark.scss:bootstrap-italia-green/dist/bootstrap-italia-green-dark.min.css --style=compressed",
     "buildgreenemerald": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-emerald.scss:bootstrap-italia-green/dist/bootstrap-italia-green-emerald.min.css --style=compressed",
     "buildgreenteal": "sass --load-path=.  bootstrap-italia-green/scss/bootstrap-italia-green-teal.scss:bootstrap-italia-green/dist/bootstrap-italia-green-teal.min.css --style=compressed",
@@ -33,9 +34,9 @@
   "author": "Presidenza del Consiglio dei Ministri",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bootstrap-italia": "2.0.5",
-	"copyfiles": "^2.4.0",
-	"del-cli": "^5.0.0"
+	  "copyfiles": "^2.4.0",
+	  "del-cli": "^5.0.0",
+    "bootstrap-italia": "2.3.0"
   },
   "devDependencies": {
     "http-server": "^14.1.0",
